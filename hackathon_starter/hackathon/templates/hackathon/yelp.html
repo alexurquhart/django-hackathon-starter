@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-    {% include 'hackathon/base.html' %}
+{% extends "hackathon/base.html" %}
+
+{% block head %}
     <style>
       .form-signin {
         max-width: 550px;
@@ -8,11 +8,12 @@
         margin: 0 auto;
       }    
     </style>
+{% endblock %}
 
-    <body>
+{% block content %}
       <h1 class="text-center"> Yelp API </h1>
       <div class="container text-center">
-        <form class="form-signin" id="login_form" method="post" action="/hackathon/yelp/">
+        <form class="form-signin" id="login_form" method="post" action="{% url 'yelp' %}">
           {% csrf_token %}
           {% load bootstrap %}
           <br>
@@ -53,6 +54,4 @@
 	        </div>
 	      </div>
 	    {% endif %}
-
-    </body>
-</html>
+{% endblock %}

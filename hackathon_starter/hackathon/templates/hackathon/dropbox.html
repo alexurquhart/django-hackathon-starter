@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		{% include 'hackathon/base.html' %}
-	    
-	    <style>
-	    	form{
-	    		width:80%;
-	    		text-align: center;
-	    		left:0px;
-	    		right:0px;
-	    		margin:auto;
-	    		margin-top:2%;
-	    	}
-	    </style>
-	    
+{% extends "hackathon/base.html" %}
+
+{% block head %}
+<style>
+  form{
+    width:80%;
+    text-align: center;
+    left:0px;
+    right:0px;
+    margin:auto;
+    margin-top:2%;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
 	    <div class="container">
 		    <h1>Dropbox API Usage Example</h1>
 		    <hr>
@@ -61,5 +61,4 @@
 				<input type="hidden" name="submit" value="submit" />
 			</form>
 		</div>
-	</body>
-</html>
+{% endblock %}

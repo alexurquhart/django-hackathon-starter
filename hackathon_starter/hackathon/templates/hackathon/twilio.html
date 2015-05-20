@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-    {% include 'hackathon/base.html' %}
+{% extends "hackathon/base.html" %}
+
+{% block head %}
     <style>
       .form-signin {
         max-width: 550px;
@@ -8,9 +8,9 @@
         margin: 0 auto;
       }    
     </style>
+{% endblock %}
 
-    <body>
-
+{% block content %}
       {{ context }}
       <h1 class="text-center"> Twilio Messages </h1>
       <div class="container text-center">
@@ -26,6 +26,4 @@
           <input type="hidden" name="submit" value="submit" />
         </form>
       </div>
-
-    </body>
-</html>
+{% endblock %}

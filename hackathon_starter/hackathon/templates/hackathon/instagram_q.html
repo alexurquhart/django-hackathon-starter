@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-	{% include 'hackathon/base.html' %}
+{% extends "hackathon/base.html" %}
+
+{% block content %}
 	<h1 class="text-center"> {{ title }}</h1> 
 	<br>
 	<div class="container text-center">
@@ -35,5 +34,4 @@
 		</div>
 	</div>
 	{% endif %}
-
-</html>
+{% endblock %}

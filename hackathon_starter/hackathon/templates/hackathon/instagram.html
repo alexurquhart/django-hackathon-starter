@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body>
-	{% include 'hackathon/base.html' %}
-	<h1 class="text-center"> {{ title }}</h1> 
+{% extends "hackathon/base.html" %}
+
+{% block content %}
+	<h1 class="text-center">{{ title }}</h1> 
 	<br>
 
 	<div class="container text-center">
-		<form class="form-inline" method='get' action="/hackathon/instagram/">
+		<form class="form-inline" method='get' action="{% url 'instagram' %}">
 		  <div class="form-group">
 		    <input type="text" name="instagram_tag" class="form-control" placeholder="Input tag, e.g: kitten">
 		  </div>
@@ -27,4 +26,4 @@
 		</div>
 	</div>	
 	{% endif %}
-</html>
+{% endblock %}

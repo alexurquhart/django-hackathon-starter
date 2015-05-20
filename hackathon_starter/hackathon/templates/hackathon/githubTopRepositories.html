@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html>
-<body>
-	{% include 'hackathon/base.html' %}
-    <style>
-      .form-signin {
-        max-width: 550px;
-        padding: 15px;
-        margin: 0 auto;
-      }    
-    </style>
+{% extends "hackathon/base.html" %}
 
+{% block head %}
+<style>
+  .form-signin {
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+  }    
+</style>
+{% endblock %}
+
+{% block content %}
     <h1 class="text-center"> Github Top Repositories </h1>
 
     <div class="container text-center">
-        <form class="form-signin" id="login_form" method="post" action="/hackathon/githubTopRepositories/">
+        <form class="form-signin" id="login_form" method="post" action="{% url 'githubTopRepositories' %}">
           {% csrf_token %}
           {% load bootstrap %}
           <br>
@@ -46,6 +47,4 @@
                 </table>
             </div>
         </div>
-
-</body>
-</html>
+{% endblock %}

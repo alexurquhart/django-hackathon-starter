@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		{% include 'hackathon/base.html' %}
-	    <style>
-	    
-	    </style>
-	    
+{% extends "hackathon/base.html" %}
+
+{% block content %}
 	    <div class="container">
 		    <h1>Facebook API Usage Example</h1>
 		    <hr>
@@ -54,5 +49,4 @@
 	    	After gaining the desired permissions, you can call <em> check_permissions(self, perm)</em> to check if you gained permission from the user and <em>request_permissions</em> to request the permission from the user.
 	    	</div>
         </div>
-    </body>
-</html>
+{% endblock %}

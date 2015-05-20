@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-    {% include 'hackathon/base.html' %}
-    <style>
-      .form-signin {
-        max-width: 550px;
-        padding: 15px;
-        margin: 0 auto;
-      }    
-    </style>
+{% extends "hackathon/base.html" %}
 
-    <body>
+{% block head %}
+<style>
+  .form-signin {
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+  }    
+</style>
+{% endblock %}
+
+{% block content %}
       <div class="container text-center">
         <form class="form-signin" id="login_form" method="post" action="/hackathon/login/">
           {% csrf_token %}
@@ -59,5 +60,4 @@
           Sign in with Dropbox
         </a> 
       </div>
-    </body>
-</html>
+{% endblock %}

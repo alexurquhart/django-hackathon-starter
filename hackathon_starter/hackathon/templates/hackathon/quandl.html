@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
-	{% include 'hackathon/base.html' %}
+{% extends "hackathon/base.html" %}
+
+{% block content %}
 
 <h1 class="text-center"> Quandl Collection </h1>
     <h2 class="text-center"> Index Data </h2>
@@ -85,6 +84,4 @@
             </table>
         </div>
     </div>
-        
-</body>
-</html>
+{{% endblock %}}
